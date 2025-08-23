@@ -15,13 +15,14 @@ Show users where key files are.
  📂 Project Structure
 
 ai-agent-challenge/ 
+|__agent.py
 ├── pdf_parser.py        # Main script for parsing PDFs 
 ├── test_parser.py       # Unit tests using pytest 
-├── data/ │  
- └── icici/ │       
+├── data/ 
+└── icici/ │       
  ├── icici Sample.pdf   # Example input PDF │       
  └── result.csv         # Extracted CSV output 
- └── README.md
+|── README.md
 
 
 
@@ -35,14 +36,12 @@ bash
 git clone https://github.com/Sripadma-Ch/ai-agent-challenge.git
 cd ai-agent-challenge
 pip install -r requirements.txt
-
 (Create `requirements.txt` with: `pdfplumber`, `pandas`, `pytest`)
 
 
 4. Usage
 
 🚀 Usage
-
 Run the parser on the sample ICICI PDF:
 
 python pdf_parser.py
@@ -73,18 +72,6 @@ test_parser.py::test_parse_creates_dataframe PASSED
 test_parser.py::test_parse_saves_csv PASSED
 
 
-6. Future Work / Notes (optional)
-
- 📌 Future Improvements
-- Handle more banks (HDFC, SBI, etc.)
-- Improve text extraction accuracy
-- Add an AI agent to categorize expenses
-
-
-
-
----
-
 ✅ With this, anyone visiting your repo can:
 
 Understand what it does
@@ -92,6 +79,7 @@ Understand what it does
 Install dependencies
 
 Run code and tests
+
 
 
 
