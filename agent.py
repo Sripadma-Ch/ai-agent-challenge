@@ -11,7 +11,7 @@ MAX_ATTEMPTS = 3
 def run_agent(target: str):
     pdf_path = r"C:\Users\srima\ai-agent-challenge\data\icici\icici sample.pdf"
     csv_path = r"C:\Users\srima\ai-agent-challenge\data\icici\result.csv"
-    parser_module = r"C:\Users\srima\ai-agent-challenge\custom_parser\icici_parser.py"
+    parser_module = r"C:\Users\srima\ai-agent-challenge\pdf_parser.py"
 
     # Check input files exist
     if not os.path.exists(pdf_path) or not os.path.exists(csv_path):
@@ -44,5 +44,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="AI Agent Challenge Runner")
     parser.add_argument("--target", required=True, help="icici")
     args = parser.parse_args()
+
 
     run_agent(args.target)
